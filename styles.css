@@ -128,7 +128,7 @@
   transform: scale(1.1);
 }
 
-.bottom-nav__bookmark {
+.bottom-nav__bookmark.active {
   background-color: #ccc;
   border-radius: 10px;
 }
