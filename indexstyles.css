@@ -130,7 +130,7 @@
   transform: scale(1.1);
 }
 
-.bottom-nav__home {
+.bottom-nav__home.active {
   background-color: #ccc;
   border-radius: 10px;
 }
