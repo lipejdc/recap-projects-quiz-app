@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="profile.css" />
+    <script src="./js/profile.js" defer></script>
     <title>Quiz App</title>
   </head>
-  <body>
+  <body data-js="body">
     <h1 class="app-title">Quiz App</h1>
     <main class="main-content">
       <section class="profile__about-me">
@@ -79,13 +80,20 @@
         </div>
       </section>
       <section class="settings">
-        <h2>Settings</h2>
-        <h3>Dark Mode</h3>
-        <input type="range" />
+        <div class="profile__settings">
+          <h2>Settings</h2>
+          <div class="dark-mode-toggle">
+            <h3>Dark Mode</h3>
+            <label class="switch" for="dark-mode-toggle">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="bottom-nav">
-      <div class="bottom-nav__section bottom-nav__home">
+      <nav class="bottom-nav__section bottom-nav__home">
         <a href="index.html" class="bottom-nav__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +110,7 @@
             />
           </svg>
         </a>
-      </div>
+      </nav>
       <div class="bottom-nav__section bottom-nav__bookmark">
         <a href="bookmarks.html" class="bottom-nav__item">
           <svg

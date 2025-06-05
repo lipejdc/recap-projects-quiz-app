@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+:root {
+  --primary-dark: #1a1f2b;
+  --white: #ffffff;
 }
 
 .app-title {
@@ -9,12 +15,14 @@
   text-align: center;
   font-size: 2.5em;
   font-weight: 900;
+  margin-bottom: 2em;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10rem;
 }
 
 .bottom-nav {
@@ -37,7 +45,6 @@
   transition: filter 0.2s ease, transform 0.2s ease;
 }
 
-.bottom-nav__item img,
 .bottom-nav__item svg {
   width: 4rem;
   height: 4rem;
@@ -49,7 +56,6 @@
   text-align: center;
 }
 
-.bottom-nav__item:hover img,
 .bottom-nav__item:hover svg {
   filter: brightness(1.5);
   transform: scale(1.1);
@@ -57,16 +63,18 @@
 
 .bottom-nav__profile.active,
 .bottom-nav__item.active svg {
-  background-color: #ccc; 
+  background-color: #ccc;
   border-radius: 10px;
-  fill: black;
 }
 
-.profile__header, .profile__details {
+.profile__header,
+.profile__details {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 80vw;
   flex-wrap: wrap;
+  gap: 1.5em;
+  margin-bottom: 3em;
 }
 
 .profile__picture {
@@ -86,23 +94,23 @@
   font-weight: bold;
   font-size: 1.1em;
   width: 100%;
-  gap: 5em
+  gap: 5em;
 }
 
 .profile__tag {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1em 2.5em;
   background-color: #fff;
   border: 1px solid black;
   border-radius: 7px;
+  color: black;
 }
 
 .profile__details {
   display: flex;
   justify-content: flex-start;
-  margin-left: 7rem;
   margin-top: 1rem;
   max-width: 80vw;
 }
@@ -116,4 +124,78 @@
   font-size: 1.1rem;
   line-height: 1.5;
   color: #444;
+}
+
+.profile__settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 80vw;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+body.dark {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+body.dark .app-title {
+  border-color: var(--white);
+}
+
+body.dark .profile__details-text {
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(1.5em);
 }

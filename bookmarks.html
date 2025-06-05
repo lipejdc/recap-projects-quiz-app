@@ -4,19 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="./js/bookmarks.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
     <h1 class="app-title">Quiz App</h1>
     <main class="main-content">
       <article class="question-card">
-        <h2 class="question-card__heading">Question 1</h2>
+        <h2 class="question-card__heading">1- What does CSS stand for?</h2>
         <div class="question-card__tags">
           <span class="question-card__tag">html</span>
           <span class="question-card__tag">css</span>
           <span class="question-card__tag">flexbox</span>
         </div>
-        <p class="question-card__text">
+        <p class="question-card__text" data-js="answer-text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button" data-js="bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+            data-js="bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button" data-js="answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">2- Which HTML tag is used to link an external CSS file to an HTML document?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
           temporibus nulla eveniet, eos facilis similique sint perferendis modi
           suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
@@ -39,13 +70,216 @@
         <button class="question-card__answer-button">Show answer</button>
       </article>
       <article class="question-card">
-        <h2 class="question-card__heading">Question 2</h2>
+        <h2 class="question-card__heading">3- What is the purpose of the HTML div element?</h2>
         <div class="question-card__tags">
           <span class="question-card__tag">html</span>
           <span class="question-card__tag">css</span>
           <span class="question-card__tag">flexbox</span>
         </div>
-        <p class="question-card__text">
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">4- Which CSS property is used to change the text color of an element?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">5- What is the default display property for most HTML elements?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">6- How can you center an element horizontally in CSS?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">7- What is the CSS pseudo-class used to select the first child of an element?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">8- Which HTML tag is used to create an ordered (numbered) list?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">9- In CSS, what property is used to control the spacing between lines of text within an element?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
+          temporibus nulla eveniet, eos facilis similique sint perferendis modi
+          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
+          earum!
+        </p>
+        <button class="question-card__bookmark-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="question-card__bookmark-icon"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </button>
+        <button class="question-card__answer-button">Show answer</button>
+      </article>
+      <article class="question-card">
+        <h2 class="question-card__heading">10- What does the term "responsive web design" refer to?</h2>
+        <div class="question-card__tags">
+          <span class="question-card__tag">html</span>
+          <span class="question-card__tag">css</span>
+          <span class="question-card__tag">flexbox</span>
+        </div>
+        <p class="question-card__text" hidden>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
           temporibus nulla eveniet, eos facilis similique sint perferendis modi
           suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
