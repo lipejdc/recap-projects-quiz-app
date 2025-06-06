@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <script src="./js/form.js" defer></script>
+    <title>Quiz App</title>
+  </head>
+  <body data-js="body">
+    <h1 class="app-title">Quiz App</h1>
+    <main class="add-card-form__main-content">
+      <form class="add-card-form" data-js="add-card-form">
+        <fieldset class="add-card-form__fieldset">
+          <legend class="add-card-form__legend">Add a new card</legend>
+
+          <div class="add-card-form__question-container">
+            <label class="add-card-form__question-label" for="question"
+              >Your question:</label
+            >
+            <textarea
+              class="add-card-form__question-textarea"
+              data-js="textarea-question"
+              id="question"
+              name="question"
+              rows="5"
+              maxlength="150"
+              required
+            ></textarea>
+            <span class="add-card-form__char-count" data-js="question-char-count">150 characters left</span>
+          </div>
+
+          <div class="add-card-form__answer-container">
+            <label class="add-card-form__answer-label" for="answer"
+              >Your answer:</label
+            >
+            <textarea
+              class="add-card-form__answer-textarea"
+              data-js="textarea-answer"
+              id="answer"
+              name="answer"
+              rows="5"
+              maxlength="150"
+              required
+            ></textarea>
+            <span class="add-card-form__char-count" data-js="answer-char-count">150 characters left</span>
+          </div>
+
+          <div class="add-card-form__tags-container">
+            <label class="add-card-form__tags-label" for="tag">Tags:</label>
+            <input
+              id="tag"
+              name="tag"
+              type="text"
+              placeholder="e.g., css, html, javascript"
+              required
+            />
+          </div>
+
+          <button class="add-card-form__submit-button" type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </main>
+    <footer class="bottom-nav">
+      <div class="bottom-nav__section">
+        <a href="index.html" class="bottom-nav__item bottom-nav__home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-house-icon lucide-house"
+          >
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path
+              d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="bottom-nav__section bottom-nav__bookmark">
+        <a href="bookmarks.html" class="bottom-nav__item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </a>
+      </div>
+      <div class="bottom-nav__section bottom-nav__form active">
+        <a href="form.html" class="bottom-nav__item active">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-circle-plus-icon lucide-circle-plus"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12h8" />
+            <path d="M12 8v8" />
+          </svg>
+        </a>
+      </div>
+      <div class="bottom-nav__section">
+        <a href="profile.html" class="bottom-nav__item bottom-nav__profile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 20a6 6 0 0 0-12 0" />
+            <circle cx="12" cy="10" r="4" />
+            <circle cx="12" cy="12" r="10" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

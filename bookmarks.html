@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="./js/bookmarks.js" defer></script>
+    <script type="module" src="./js/bookmarks.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
@@ -18,10 +18,7 @@
           <span class="question-card__tag">flexbox</span>
         </div>
         <p class="question-card__text" data-js="answer-text" hidden>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic esse
-          temporibus nulla eveniet, eos facilis similique sint perferendis modi
-          suscipit doloremque dolore quae voluptas qui, nostrum quos ut maxime
-          earum!
+          Cascading Style Sheets.
         </p>
         <button class="question-card__bookmark-button" data-js="bookmark-button">
           <svg
@@ -334,6 +331,26 @@
             stroke-linejoin="round"
           >
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+        </a>
+      </div>
+      <div class="bottom-nav__section bottom-nav__form">
+        <a href="form.html" class="bottom-nav__item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-circle-plus-icon lucide-circle-plus"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12h8" />
+            <path d="M12 8v8" />
           </svg>
         </a>
       </div>

@@ -1,0 +1,100 @@
+@import "./components/bottom-nav.css";
+@import "./components/global.css";
+@import "./components/question-card.css";
+
+
+.add-card-form__main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rem;
+  gap: 4em;
+}
+
+.bottom-nav__form.active,
+.bottom-nav__item.active svg {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.add-card-form {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.add-card-form__fieldset {
+  border: 2px solid #ccc;
+  padding: 1.5em 2em 0.5em;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.add-card-form__legend {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0 0.5em;
+  color: #333;
+  text-align: center;
+}
+
+.add-card-form__question-container,
+.add-card-form__answer-container,
+.add-card-form__tags-container {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.add-card-form__question-label,
+.add-card-form__answer-label,
+.add-card-form__tags-label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.add-card-form__question-textarea,
+.add-card-form__answer-textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 0.6em 0.8em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.add-card-form__question-textarea:focus,
+.add-card-form__answer-textarea:focus,
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-card-form__char-count {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -1.5em;
+  right: 0.5em;
+}
+
+.add-card-form__submit-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  padding: 0.7em 1.4em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1em auto;
+}
+
+.add-card-form___submit-button:hover,
+.add-card-form___submit-button:focus {
+  background-color: #0056b3;
+  outline: none;
+}
