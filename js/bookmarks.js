@@ -1,24 +1,32 @@
+//VARIABLES
 const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
 const bookmarkIcon = document.querySelector('[data-js="bookmark-icon"]');
 const answerButton = document.querySelector('[data-js="answer-button"]');
 const answerText = document.querySelector('[data-js="answer-text"]');
 
-//Bookmark
-const addBookmarkToCard = () => {
-  bookmarkIcon.setAttribute("fill", "black");
+//FUNCTIONS
+const toggleBookmark = () => {
+  const isCardBookmarked = bookmarkIcon.getAttribute("fill") === "black";
+  bookmarkIcon.setAttribute("fill", isCardBookmarked ? "none" : "black");
 };
 
-const removeBookmarkFromCard = () => {
-  bookmarkIcon.setAttribute("fill", "none");
-};
+//EVENT LISTENERS
+bookmarkButton.addEventListener("click", toggleBookmark);
 
-bookmarkButton.addEventListener("click", () => {
-  const currentFill = bookmarkIcon.getAttribute("fill");
-  currentFill === "none" ? addBookmarkToCard() : removeBookmarkFromCard();
-});
-
-//Answer button
 answerButton.addEventListener("click", () => {
-  const isHidden = answerText.toggleAttribute("hidden");
-  answerButton.textContent = isHidden ? "Show answer" : "Hide answer";
+  const isAnswerHidden = answerText.toggleAttribute("hidden");
+  answerButton.textContent = isAnswerHidden ? "Show answer" : "Hide answer";
 });
+
+
+
+// const addBookmarkToCard = () => {
+//   bookmarkIcon.setAttribute("fill", "black");
+// };
+
+// const removeBookmarkFromCard = () => {
+//   bookmarkIcon.setAttribute("fill", "none");
+// };
+
+  // const currentFill = bookmarkIcon.getAttribute("fill");
+  // currentFill === "none" ? addBookmarkToCard() : removeBookmarkFromCard();

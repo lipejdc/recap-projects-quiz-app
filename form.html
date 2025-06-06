@@ -4,34 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="form.css" />
-    <script src="./js/profile.js" defer></script>
+    <script src="./js/form.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body data-js="body">
     <h1 class="app-title">Quiz App</h1>
-    <main class="main-content">
-        <form>
-  <fieldset>
-    <legend>Add a new card</legend>
+    <main class="add-card-form__main-content">
+      <form class="add-card-form" data-js="add-card-form">
+        <fieldset class="add-card-form__fieldset">
+          <legend class="add-card-form__legend">Add a new card</legend>
 
-    <div class="form-group">
-      <label for="question">Your question:</label>
-      <textarea id="question" name="question" rows="4" required></textarea>
-    </div>
+          <div class="add-card-form__question-container">
+            <label class="add-card-form__question-label" for="question"
+              >Your question:</label
+            >
+            <textarea
+              class="add-card-form__question-textarea"
+              data-js="textarea-question"
+              id="question"
+              name="question"
+              rows="5"
+              maxlength="150"
+              required
+            ></textarea>
+            <span class="add-card-form__char-count" data-js="question-char-count">150 characters left</span>
+          </div>
 
-    <div class="form-group">
-      <label for="answer">Your answer:</label>
-      <textarea id="answer" name="answer" rows="4" required></textarea>
-    </div>
+          <div class="add-card-form__answer-container">
+            <label class="add-card-form__answer-label" for="answer"
+              >Your answer:</label
+            >
+            <textarea
+              class="add-card-form__answer-textarea"
+              data-js="textarea-answer"
+              id="answer"
+              name="answer"
+              rows="5"
+              maxlength="150"
+              required
+            ></textarea>
+            <span class="add-card-form__char-count" data-js="answer-char-count">150 characters left</span>
+          </div>
 
-    <div class="form-group">
-      <label for="tag">Tags:</label>
-      <input id="tag" name="tag" type="text" placeholder="e.g., css, html, javascript" />
-    </div>
+          <div class="add-card-form__tags-container">
+            <label class="add-card-form__tags-label" for="tag">Tags:</label>
+            <input
+              id="tag"
+              name="tag"
+              type="text"
+              placeholder="e.g., css, html, javascript"
+              required
+            />
+          </div>
 
-    <button type="submit">Submit</button>
-  </fieldset>
-</form>
+          <button class="add-card-form__submit-button" type="submit">Submit</button>
+        </fieldset>
+      </form>
     </main>
     <footer class="bottom-nav">
       <div class="bottom-nav__section">
